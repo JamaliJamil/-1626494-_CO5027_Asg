@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UnderwearKingdomForMens {
-    
-    
-    public partial class About1 {
+namespace UnderwearKingdomForMens
+{
+
+
+    public partial class Product
+    {
     }
 }

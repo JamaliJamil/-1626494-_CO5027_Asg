@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace UnderwearKingdomForMens
 {
-	public partial class Contact1 : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class UKFM : System.Web.UI.MasterPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+    }
 }
