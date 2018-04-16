@@ -6,7 +6,45 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
     <p>
-    <asp:FormView ID="FormView1" runat="server">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductId" DataSourceID="SqlDataSource1">
+        <EditItemTemplate>
+            ProductId:
+            <asp:Label ID="ProductIdLabel1" runat="server" Text='<%# Eval("ProductId") %>' />
+            <br />
+            Name:
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
+            <br />
+            Description:
+            <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            <br />
+            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+        </EditItemTemplate>
+        <InsertItemTemplate>
+            ProductId:
+            <asp:TextBox ID="ProductIdTextBox" runat="server" Text='<%# Bind("ProductId") %>' />
+            <br />
+            Name:
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
+            <br />
+            Description:
+            <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            <br />
+            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+        </InsertItemTemplate>
+        <ItemTemplate>
+            ProductId:
+            <asp:Label ID="ProductIdLabel" runat="server" Text='<%# Eval("ProductId") %>' />
+            <br />
+            Name:
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Bind("Name") %>' />
+            <br />
+            Description:
+            <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
+            <br />
+
+        </ItemTemplate>
     </asp:FormView>
 </p>
 <p>
