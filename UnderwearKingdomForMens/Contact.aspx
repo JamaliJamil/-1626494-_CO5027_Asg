@@ -37,25 +37,21 @@
     
     <asp:Literal ID="litSubmitError" runat="server"></asp:Literal>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
-    <div id="map">
-        <script>
-            var map;
-            function initMap() {
 
-                var collegeLating = { lat: 4.885731, lng: 114.931669 };
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 19,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
-        </script>
+<asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
+     <div id="map">
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 4.8857362, lng: 114.9294805 },
+          zoom: 18
+        });
+      }
+    </script>
+
        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxr0EZg_QxHreDEi4U1c7DxeMI7PvweQc&callback=initMap"
   type="text/javascript" async="async" defer="defer"></script>
 
-    </div>
+         </div>
 </asp:Content>

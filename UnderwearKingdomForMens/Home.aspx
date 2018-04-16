@@ -41,7 +41,26 @@
             <p>&nbsp;</p></a>
         </td>
         </tr>
-    </table>
+    </table>   
+    <br />
+    <br />
+
+    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        <HeaderTemplate><ul></HeaderTemplate>
+
+        <ItemTemplate>
+            <li>
+                <a href="<%#Eval ("ProductId", "Product.aspx?Id={0}") %>">
+                    <%#Eval("Name") %>
+                </a>
+            </li>
+        </ItemTemplate>
+
+        <FooterTemplate></ul></FooterTemplate>
+    </asp:Repeater>
+    <br />
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" SelectCommand="SELECT * FROM [tbl_Product]"></asp:SqlDataSource>
    
         
 </asp:Content>

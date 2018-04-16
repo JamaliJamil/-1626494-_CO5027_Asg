@@ -7,10 +7,10 @@
     <h3>Login Form</h3>
  <div id="form2">
      <strong>
- <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
+ <asp:Label ID="Label1" runat="server" Text="UserName"></asp:Label>
      </strong>
  <br />
- <asp:TextBox ID="txtLoginEmail" runat="server" TextMode="Email"></asp:TextBox>
+ <asp:TextBox ID="txtLoginEmail" runat="server"></asp:TextBox>
  <br />
  <br />
      <strong>
