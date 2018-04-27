@@ -8,12 +8,31 @@ using Microsoft.AspNet.Identity;
 
 namespace UnderwearKingdomForMens.Admin
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
             HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             Response.Redirect("~/Login.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/Add.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/List.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/Edit.aspx");
         }
     }
 }

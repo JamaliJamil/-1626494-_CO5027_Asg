@@ -15,6 +15,18 @@
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
             <br />
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+            <br />
+            Image:
+            <asp:FileUpload ID="FileUpload1" runat="server" />
+            <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click1">Save Image</asp:LinkButton>
+            <asp:Label ID="Label1" runat="server" Text='<%# Bind("Image") %>'></asp:Label>
+            <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
@@ -27,6 +39,15 @@
             <br />
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            <br />
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+            <br />
+            Image:
+            <asp:TextBox ID="ImageTextBox" runat="server" Text='<%# Bind("Image") %>' />
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -41,36 +62,59 @@
             Description:
             <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
             <br />
+            Price:
+            <asp:Label ID="PriceLabel" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:Label ID="QuantityLabel" runat="server" Text='<%# Bind("Quantity") %>' />
+            <br />
+            Image:
+            <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' />
+            <br />
             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
-            &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
+            &nbsp;
         </ItemTemplate>
     </asp:FormView>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" DeleteCommand="DELETE FROM [tbl_Product] WHERE [ProductId] = @original_ProductId AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))" InsertCommand="INSERT INTO [tbl_Product] ([ProductId], [Name], [Description]) VALUES (@ProductId, @Name, @Description)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tbl_Product] WHERE ([ProductId] = @ProductId)" UpdateCommand="UPDATE [tbl_Product] SET [Name] = @Name, [Description] = @Description WHERE [ProductId] = @original_ProductId AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" DeleteCommand="DELETE FROM [tbl_Product] WHERE [ProductId] = @original_ProductId AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Quantity] = @original_Quantity) OR ([Quantity] IS NULL AND @original_Quantity IS NULL)) AND (([Image] = @original_Image) OR ([Image] IS NULL AND @original_Image IS NULL))" InsertCommand="INSERT INTO [tbl_Product] ([ProductId], [Name], [Description], [Price], [Quantity], [Image]) VALUES (@ProductId, @Name, @Description, @Price, @Quantity, @Image)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tbl_Product] WHERE ([ProductId] = @ProductId)" UpdateCommand="UPDATE [tbl_Product] SET [Name] = @Name, [Description] = @Description, [Price] = @Price, [Quantity] = @Quantity, [Image] = @Image WHERE [ProductId] = @original_ProductId AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Quantity] = @original_Quantity) OR ([Quantity] IS NULL AND @original_Quantity IS NULL)) AND (([Image] = @original_Image) OR ([Image] IS NULL AND @original_Image IS NULL))">
         <DeleteParameters>
             <asp:Parameter Name="original_ProductId" Type="Int32" />
             <asp:Parameter Name="original_Name" Type="String" />
             <asp:Parameter Name="original_Description" Type="String" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Quantity" Type="Int32" />
+            <asp:Parameter Name="original_Image" Type="String" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="ProductId" Type="Int32" />
             <asp:Parameter Name="Name" Type="String" />
             <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="Quantity" Type="Int32" />
+            <asp:Parameter Name="Image" Type="String" />
         </InsertParameters>
         <SelectParameters>
-            <asp:QueryStringParameter Name="ProductId" QueryStringField="id" Type="Int32" />
+            <asp:QueryStringParameter Name="ProductId" QueryStringField="Id" Type="Int32" />
         </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="Name" Type="String" />
             <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="Quantity" Type="Int32" />
+            <asp:Parameter Name="Image" Type="String" />
             <asp:Parameter Name="original_ProductId" Type="Int32" />
             <asp:Parameter Name="original_Name" Type="String" />
             <asp:Parameter Name="original_Description" Type="String" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Quantity" Type="Int32" />
+            <asp:Parameter Name="original_Image" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <br />
     <br />
+    <asp:Button ID="Button1" runat="server" Text="Go to Add page" OnClick="Button1_Click1"/>
+    <asp:Button ID="Button2" runat="server" Text="Go to List page" OnClick="Button2_Click" />
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

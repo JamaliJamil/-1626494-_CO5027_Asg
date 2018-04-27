@@ -14,7 +14,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" Runat="Server">
     <h2>Polo Ralph Lauren Underwear for mens</h2>
 <p>&nbsp;</p>
-    <table>
+  <!---  <table>
         <tr>
         <td><a href="product1.aspx" title="Polo Underwear 1">
             <img src="Admin/ProductImages/1.jpg" alt="Polo Underwear 1" height="200" width="240"/> &nbsp<p><strong>Description:</strong> <span class="auto-style1">Polo Ralph Lauren 3-Pack Boxer Brief </span> </p> <p><strong>Price:</strong> <span class="auto-style1">$39.50</span></p>
@@ -43,7 +43,7 @@
         </tr>
     </table>   
     <br />
-    <br />
+    <br />  -->
 
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
         <HeaderTemplate><ul></HeaderTemplate>
@@ -52,15 +52,13 @@
             <li>
                 <a href="<%#Eval ("ProductId", "Product.aspx?Id={0}") %>">
                     <%#Eval("Name") %>
-                </a>
+                <p><asp:Image ID="dspImg" Height="100" Width="100" runat="server" ImageUrl='<%#Eval ("Image") %>' /></p></a>
             </li>
         </ItemTemplate>
 
         <FooterTemplate></ul></FooterTemplate>
     </asp:Repeater>
-    <br />
-    <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" SelectCommand="SELECT * FROM [tbl_Product]"></asp:SqlDataSource>
    
-        
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" SelectCommand="SELECT * FROM [tbl_Product]"></asp:SqlDataSource>
+          
 </asp:Content>

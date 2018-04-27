@@ -10,7 +10,7 @@
 namespace UnderwearKingdomForMens {
     
     
-    public partial class Login {
+    public partial class Register {
         
         /// <summary>
         /// Label1 control.

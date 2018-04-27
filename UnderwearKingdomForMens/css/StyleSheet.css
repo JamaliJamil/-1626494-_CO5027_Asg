@@ -130,7 +130,7 @@ td {
 }
     
 
-#btnReg, #btnSubmitForm, #btnLogin {
+#btnReg, #btnSubmitForm, #btnLogin, #btnLogOut, #Button1, #Button2, #Button3 {
     border:2px solid black;
     padding:4px;
 }
@@ -148,3 +148,6 @@ td {
 }
 
 /*------------------------------------------------*/
+
+
+    

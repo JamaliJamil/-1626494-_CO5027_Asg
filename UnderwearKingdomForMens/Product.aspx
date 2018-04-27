@@ -17,6 +17,12 @@
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
             <br />
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+            <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
@@ -30,6 +36,12 @@
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
             <br />
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+            <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
@@ -42,6 +54,13 @@
             <br />
             Description:
             <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
+            <br />
+
+            Price:
+            <asp:Label ID="PriceLabel" runat="server" Text='<%# Bind("Price") %>' />
+            <br />
+            Quantity:
+            <asp:Label ID="QuantityLabel" runat="server" Text='<%# Bind("Quantity") %>' />
             <br />
 
         </ItemTemplate>

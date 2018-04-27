@@ -44,8 +44,12 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 4.8857362, lng: 114.9294805 },
+            center: { lat: 4.885731, lng: 114.931669 },
           zoom: 18
+        });
+        var marker = new google.maps.Marker({
+            position: { lat: 4.885731, lng: 114.931669 },
+            map: map
         });
       }
     </script>
@@ -53,5 +57,5 @@
        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxr0EZg_QxHreDEi4U1c7DxeMI7PvweQc&callback=initMap"
   type="text/javascript" async="async" defer="defer"></script>
 
-         </div>
+    </div>
 </asp:Content>

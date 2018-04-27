@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace UnderwearKingdomForMens.Admin
 {
-    public partial class list : System.Web.UI.Page
+    public partial class List : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,6 +17,10 @@ namespace UnderwearKingdomForMens.Admin
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Admin/Add.aspx");
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/Index.aspx");
         }
     }
 }
