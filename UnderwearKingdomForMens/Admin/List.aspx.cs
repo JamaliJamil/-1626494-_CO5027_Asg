@@ -18,6 +18,7 @@ namespace UnderwearKingdomForMens.Admin
         {
             Response.Redirect("~/Admin/Add.aspx");
         }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Admin/Index.aspx");

@@ -14,14 +14,14 @@ namespace UnderwearKingdomForMens.Admin
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Admin/List.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/Index.aspx");
         }
     }
 }

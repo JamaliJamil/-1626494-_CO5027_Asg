@@ -15,19 +15,6 @@
     <link href="css/StyleSheet.css" rel="stylesheet" />
     <meta name="viewport" content="initial-scale=1.0" />
     <meta charset="utf-8" />
-    <style>
-        /* Always set the map height explicitly to define the size of the div element that contains the map. */
-        #map {
-            height:100%;
-        }
-        /* Optional: Make the sample page fill the window */
-        html, body {
-            height:100%;
-            margin:0;
-            padding:0;
-        }
-
-    </style>
 </head>
 <body runat="server">
     <form id="form1" runat="server">
@@ -38,7 +25,6 @@
     <div id="menu">
         <ul>
             <li><a href="~/Default.aspx" runat="server" > Home</a></li>
-            <li><a href="~/About.aspx" runat="server" > About</a></li>
             <li><a href="~/Product.aspx" runat="server" > Product</a></li>
             <li><a href="~/Login.aspx" runat="server" > Login</a></li>
             <li><a href="~/Register.aspx" runat="server" > Register</a></li>
@@ -59,8 +45,11 @@
      
     <div id="footer">
      <p>Copyright by:MensPoloUnderwear.co.bn</p>
-     <a href="http://validator.w3.org/check?uri=referer" > Validate HTML</a>
-     <a href="http:jigsaw.w3.org/css-validator/check/referer" > Validate CSS</a> 
+     <a href="http://validator.w3.org/check?uri=referer" >- Validate HTML</a>
+        <br />
+     <a href="http://jigsaw.w3.org/css-validator/check/referer" >- Validate CSS</a> 
+        <br />
+     <a href="~/Admin/Index.aspx" runat="server">- Admin Login</a>
     </div>
    
     </body>

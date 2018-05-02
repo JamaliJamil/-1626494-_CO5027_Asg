@@ -32,11 +32,12 @@ namespace UnderwearKingdomForMens
 
             //create credentials - e.g. username and password for the account
             System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("Jamalisagunner@gmail.com", "Jamaliahsan");
+            smtpClient.Credentials = credentials;
 
             try
             {
                 smtpClient.Send(msg);
-                litSubmitError.Text = "<p>Success, mail sent using SMTPwith secure connection and credentials</p>";
+                litSubmitError.Text = "<p>Success, mail sent using SMTP with secure connection and credentials</p>";
             }
             catch (Exception ex)
             {

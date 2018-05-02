@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPU.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="UnderwearKingdomForMens.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Login
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

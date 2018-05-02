@@ -29,10 +29,5 @@ namespace UnderwearKingdomForMens.Admin
         {
             Response.Redirect("~/Admin/List.aspx");
         }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Admin/Edit.aspx");
-        }
     }
 }

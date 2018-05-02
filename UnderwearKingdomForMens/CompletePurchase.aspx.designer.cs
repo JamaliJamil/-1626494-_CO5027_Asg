@@ -10,24 +10,33 @@
 namespace UnderwearKingdomForMens {
     
     
-    public partial class Product1 {
+    public partial class CompletePurchase {
         
         /// <summary>
-        /// repeater1 control.
+        /// labelText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeater1;
+        protected global::System.Web.UI.WebControls.Label labelText;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// btnConfirmPurchase control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Button btnConfirmPurchase;
+        
+        /// <summary>
+        /// litInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litInformation;
     }
 }

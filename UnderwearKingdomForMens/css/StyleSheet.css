@@ -12,6 +12,9 @@
     padding:4px;
 }
 
+.auto-style2 {
+        height: 66px;
+    }
 
 /*----------Contents on every pages----------*/
 #content {
@@ -53,6 +56,10 @@
     text-align:center;
     padding:4px;
     margin:4px;
+}
+
+#footer a:hover {
+    color:#ffd800;
 }
 
 
@@ -100,17 +107,10 @@
     display: inline-block;
 }
 
-td {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top:10px;
-}
-
 #content table img {
     border:2px solid black;
     text-align:center;
 }
-
 
 /*-------------------------------------*/
 
@@ -141,11 +141,15 @@ td {
 /*-------------------map--------------------------*/
 
 #map {
-    height:100%;
-    border:2px solid black;
-    margin:4px;
-    
+    height: 600px;
+    overflow: hidden;
+    margin-left:4px;
+    margin-right:4px;
+    position: relative;
+    border:2px;
 }
+
+
 
 /*------------------------------------------------*/
 

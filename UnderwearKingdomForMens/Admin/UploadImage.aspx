@@ -7,10 +7,13 @@
     <asp:FileUpload ID="imageFileUploadControl" runat="server" />
     <br />
     <br />
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
     <br />
     <br />
     <asp:Image ID="CurrentImage" runat="server" />
+    <!--<div>
+    <asp:Image ID="displayProductImage" runat="server" Height="180px" ImageUrl='<%# Eval("Image") %>' Width="200px" />
+    </div>-->
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

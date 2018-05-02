@@ -11,7 +11,7 @@ namespace UnderwearKingdomForMens.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string productId = Request.QueryString["Id"];
+            string productId = Request.QueryString["ProductId"];
             string filename = productId + ".jpg";
 
             CurrentImage.ImageUrl = "~/Admin/ProductImages/" + filename;
@@ -19,7 +19,7 @@ namespace UnderwearKingdomForMens.Admin
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string productId = Request.QueryString["Id"];
+            string productId = Request.QueryString["ProductId"];
 
 
             string filename = productId + ".jpg";
