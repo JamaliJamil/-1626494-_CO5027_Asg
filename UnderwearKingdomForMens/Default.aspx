@@ -28,7 +28,11 @@
             </ItemTemplate>
             <FooterTemplate></div></FooterTemplate>
         </asp:Repeater>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" SelectCommand="SELECT * FROM [tbl_Product]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626494_db_1626494_co5027_asg1ConnectionString %>" SelectCommand="SELECT * FROM [tbl_Product] WHERE ([Quantity] &gt; @Quantity)">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="0" Name="Quantity" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
           
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">

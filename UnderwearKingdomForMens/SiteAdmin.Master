@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.Master.cs" Inherits="UnderwearKingdomForMens.Admin1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+           <asp:ContentPlaceHolder id="title" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+   
+</head>
+<body runat="server">
+    <form id="form1" runat="server">
+        <div id="header">
+        <img src="logo/logo.jpg" />
+        <h1>Polo Ralph Lauren</h1> 
+    </div>  
+    <div id="menu">
+        <ul>
+                <li><a href="~/Admin/Index.aspx" runat="server" > Home</a></li>
+            <li><a href="~/Admin/List.aspx" runat="server" > List</a></li>
+            <li><a href="~/Admin/Add.aspx" runat="server" > Add</a></li>      
+        </ul>
+   &nbsp;
+    </div>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="contentBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        </form>
+
+      <asp:ContentPlaceHolder ID="GoogleMap" runat="server">
+    </asp:ContentPlaceHolder>  
+     
+    <div id="footer">
+     <p>Copyright by:MensPoloUnderwear.co.bn</p>
+     <a href="http://validator.w3.org/check?uri=referer" > Validate HTML</a>
+        <br />
+     <a href="http:jigsaw.w3.org/css-validator/check/referer" > Validate CSS</a> 
+    </div>
+   
+    </body>
+</html>

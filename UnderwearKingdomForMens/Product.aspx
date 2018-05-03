@@ -7,22 +7,20 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" runat="server">
     <h2>List of available products</h2>
      <asp:Repeater ID="repeater1" runat="server" DataSourceID="SqlDataSource1">
-            <HeaderTemplate><div></HeaderTemplate>
+             <HeaderTemplate><div></HeaderTemplate>
             <ItemTemplate>
                 <div class="classRepeater">
                     <a href="<%# Eval ("ProductId", "Pro.aspx?Id={0}") %>">
                         
                         <table>
+
+                       <tr><td><asp:Image ID="displayProductImage" runat="server" Height="180px" alt="ProductImage" ImageUrl='<%# Eval("Image") %>' Width="200px" /></td></tr>
+
+                       <tr><td><asp:Label ID="LblProductName" runat="server" Text="Name:"></asp:Label><%# Eval ("Name") %></td></tr>  
+                       <tr> <td><asp:Label ID="Label1" runat="server" Text="Description:"></asp:Label> <%# Eval("Description") %></td></tr>
+                       <tr><td><asp:Label ID="lblProductPrice" runat="server" Text="Price: $"></asp:Label><%# Eval ("Price") %></td></tr>
+                       <tr><td><asp:Label ID="lblProductQty" runat="server" Text="Quantity: "></asp:Label><%# Eval ("Quantity") %></td></tr>
                             
-                        <div>
-                            <asp:Image ID="displayProductImage" runat="server" Height="180px" ImageUrl='<%# Eval("Image") %>' Width="200px" />
-                        </div>
-                        
-                        <div><asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label><%# Eval ("Name") %></div>
-                        <div><asp:Label ID="Label2" runat="server" Text="Description:"></asp:Label> <%# Eval("Description") %></div>
-                        <div><asp:Label ID="lblProductPrice" runat="server" Text="Price: $"></asp:Label><%# Eval ("Price") %></div>
-                        <div><asp:Label ID="lblProductQty" runat="server" Text="Quantity: "></asp:Label><%# Eval ("Quantity") %></div>
-   
                         </table>
                     </a>
                 </div>
