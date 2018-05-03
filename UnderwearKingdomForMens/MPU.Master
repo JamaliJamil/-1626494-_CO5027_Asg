@@ -1,8 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPU.Master.cs" Inherits="UnderwearKingdomForMens.UKFM" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head runat="server">
     <title>
            <asp:ContentPlaceHolder id="title" runat="server">
@@ -19,7 +18,7 @@
 <body runat="server">
     <form id="form1" runat="server">
         <div id="header">
-        <img src="logo/logo.jpg" />
+        <img src="logo/logo.jpg" alt="Logo"/>
         <h1>Polo Ralph Lauren</h1> 
     </div>  
     <div id="menu">
